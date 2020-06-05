@@ -34,10 +34,3 @@ df_2days <- df_full[(df_full$Date3 == "2007-02-01" | df_full$Date3 == "2007-02-0
 hist(df_2days$Global_active_power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col="red")
 dev.copy(png, file= "plot1.png",width=480, height=480, units = "px")
 dev.off()
-
-
-##Plot2 - note that weekdays are in German on x-axis
-with(df_2days, plot(datetime2,Global_active_power, type = "l",  ylab = "Global Active Power (kilowatts)", xlab= ""))
-dev.copy(png, file= "plot2.png",width=480, height=480, units = "px")
-dev.off()
-
